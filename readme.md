@@ -52,15 +52,19 @@ gulp watch --production
 
 ### Individual tasks
 
-Images
+#### Images
 
 ```
 gulp images
 ```
 
+#### Styles
+
 ```
 gulp styles
 ```
+
+#### Scripts
 
 ```
 gulp scripts
