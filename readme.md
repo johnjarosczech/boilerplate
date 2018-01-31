@@ -53,6 +53,8 @@ gulp watch --production
 ### Individual tasks
 
 #### Images
+The images you must put in the assets/images folder. The images will be compressed and then copied to public folder.
+If you put in the public folder you get the alert: Unexpected files in destination directory.
 
 ```
 gulp images
