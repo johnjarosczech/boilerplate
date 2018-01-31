@@ -47,10 +47,10 @@ gulp --production
 or watch
 
 ```
-gulp --production
+gulp watch --production
 ```
 
-### Individual tasks
+### Individual tasks
 
 Images
 
