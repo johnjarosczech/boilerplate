@@ -1,0 +1,65 @@
+/* [Core] - Typography
+------------------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font-family;
+    font-style: $header-font-style;
+
+    text-rendering: $header-text-rendering;
+}
+
+@each $header, $value in $header-sizes {
+    #{$header} {
+        font-size: rem-calc($value);
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: $paragraph-margin-bottom;
+
+    font-size: inherit;
+    line-height: $paragraph-lineheight;
+    text-rendering: $paragraph-text-rendering;
+}
+
+a {
+    line-height: inherit;
+    color: $anchor-color;
+    text-decoration: $anchor-text-decoration;
+  
+    cursor: pointer;
+  
+    &:hover,
+    &:focus {
+      color: $anchor-color-hover;
+  
+      @if $anchor-text-decoration-hover != $anchor-text-decoration {
+        text-decoration: $anchor-text-decoration-hover;
+      }
+    }
+  
+    img {
+      border: 0;
+    }
+}
+
+ul,
+ol,
+dl {
+    margin-bottom: $list-margin-bottom;
+    list-style-position: $list-style-position;
+    line-height: $list-lineheight;
+}
+
+li {
+    font-size: inherit;
+}
+
+ul {
+    list-style-type: $list-style-type;
+}
+
+/* Custom settings
+------------------------------------------------------------------ */
+

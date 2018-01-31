@@ -1,0 +1,35 @@
+/* [Elements] - Buttons
+------------------------------------------------------------------ */
+
+.e-button {
+    @include button-core();
+
+    border-radius: $global-radius;
+
+    /// Button sizes
+    /// ------------
+    &--small {
+
+    }
+
+    &--medium {
+        padding: rem-calc(12 24);
+
+        font-size: rem-calc(18);
+    }
+
+    &--large {
+
+    }
+
+    &--block {
+        @include button-expand();
+    }
+
+    /// Button colors
+    /// -------------
+    &--blue {
+        color: $button-blue-color;
+        background-color: $button-blue-background;
+    }
+}

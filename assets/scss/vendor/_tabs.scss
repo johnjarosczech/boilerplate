@@ -1,0 +1,27 @@
+.tabs {
+    width: 50%;
+
+    @include push--auto();
+
+    &__link {
+        @include button-core();
+
+        color: black;
+
+        background-color: white;
+
+        &.is-active {
+            background-color: #ededed;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        background-color: #ededed;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}

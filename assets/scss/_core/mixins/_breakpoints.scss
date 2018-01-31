@@ -1,0 +1,27 @@
+/* [Core] - Breakpoints
+------------------------------------------------------------------ */
+
+///
+/// Generates a media query string matching the input value.
+///
+/// @param {Keyword|Number} $width - Breakpoint name, or px, rem, or em value to process.
+/// @param {Keyword|String} $type - Breakpoint type, or min, max value
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type == max {
+            $width: $width - 1px;
+        }
+
+        $width: em-calc($width); // Convert any pixel, rem, or unitless value to em
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    } 
+    
+    @else {
+        @warn "Couldn't find a your breakpoint named `#{$width}`.";
+    }
+}

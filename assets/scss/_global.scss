@@ -1,0 +1,52 @@
+/* Global
+------------------------------------------------------------------ */
+
+html {
+    box-sizing: border-box;
+
+    font-size: $global-font-size
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: $body-background;
+
+    font-family: $global-font-family;
+    line-height: $global-lineheight;
+
+    @if ($body-antialiased) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+
+    max-width: 100%;
+    height: auto;
+
+    -ms-interpolation-mode: bicubic;
+}
+
+textarea {
+    height: auto;
+    min-height: 50px;
+
+    border-radius: $global-radius;
+}
+
+select {
+    width: 100%;
+
+    border-radius: $global-radius;
+}

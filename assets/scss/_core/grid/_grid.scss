@@ -1,0 +1,22 @@
+/* [Core] - Grid
+------------------------------------------------------------------ */
+
+@import 'lib/grid-framework';
+
+/// Common styles for small and large grid columns
+.columns {
+    @include make-columns();
+}
+
+/// Utilizes the mixin meant for fixed width containers, but without any defined
+/// width for fluid, full width layouts.
+.row {
+    @include make-row();
+
+    &--expanded {
+        @include row-expanded();
+    }
+}
+
+/// Common styles for small and large grid columns
+@include make-grid-columns;

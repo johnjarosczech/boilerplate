@@ -1,0 +1,55 @@
+/// Functions
+/// ---------
+
+@function calc-width($iterator) {
+    @return ((100 / $grid-columns) * $iterator) * 1%;
+}
+
+/// Mixins
+/// ---------
+
+@mixin make-row($gutter: $grid-gutter-width) {
+    @extend .clearfix;
+
+    max-width: none;
+}
+
+@mixin row-expanded() {
+    margin-left: rem-calc(($grid-gutter-width / 2) * -1);
+    margin-right: rem-calc(($grid-gutter-width / 2) * -1);
+}
+
+@mixin make-columns($gutter: $grid-gutter-width) {
+    position: relative;
+
+    width: 100%;
+    min-height: 1px;
+
+    float: left;
+
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+}
+
+@mixin make-grid-columns() {
+    @for $i from 1 through length($breakpoint-classes) {
+        $breakpoint: nth($breakpoint-classes, $i);
+
+        @for $j from 1 through $grid-columns {
+
+            @if ($breakpoint == small) {
+                .#{$breakpoint}-#{$j} {
+                    width: calc-width($j);
+                }
+            }
+
+            @else {
+                @include mq(#{$breakpoint}) {
+                    .#{$breakpoint}-#{$j} {
+                        width: calc-width($j);
+                    }
+                }
+            }
+        }
+    }
+}

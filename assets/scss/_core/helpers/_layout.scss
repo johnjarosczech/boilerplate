@@ -1,0 +1,34 @@
+/* [Core] - Helpers
+------------------------------------------------------------------ */
+
+.container {
+    &--fluid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--limitations {
+        max-width: $global-width;
+    }
+}
+
+.clearfix {
+    *zoom: 1;
+
+    &::before,
+    &::after {
+        display: table;
+
+        content: '';
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+/// To quickly centre a block element without having to worry about if there is any top or bottom margin already applied.
+@mixin push--auto {
+    margin-left: auto;
+    margin-right: auto;
+}

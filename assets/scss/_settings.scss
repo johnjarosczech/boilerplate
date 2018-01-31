@@ -1,0 +1,161 @@
+/* Settings
+------------------------------------------------------------------ */
+
+// Table of Contents:
+//
+// 1. Global
+// 2. Colors
+// 3. Typography
+// 4. Buttons
+// 5. Breakpoints
+// 6. Grid
+// 7. Modal
+
+@import '_core/mixins/unit';
+
+// 1. Global
+// ---------
+
+/// The value is inherited from the user's browser settings.
+$global-font-size: 100%;
+
+/// Global width of site.
+$global-width: rem-calc(1200);
+
+/// Global path to your images folder.
+$global-img-path: '../images';
+
+/// Global path to your fonts folder.
+$global-fonts-path: '../fonts';
+
+/// Default line height for all type.
+$global-lineheight: 1.5;
+
+/// Background color of the body.
+$body-background: white;
+
+/// Fonts stack primary and secondary.
+$global-font-family: Helvetica, Arial, sans-serif;
+$global-font-family-secondary: 'Times New Roman', serif;
+
+/// Global variables for font weight.
+$global-font-weight-light: 300;
+$global-font-weight-regular: 400;
+$global-font-weight-medium: 500;
+$global-font-weight-bold: 700;
+
+/// Set to `true` to enable antialiased type.
+$body-antialiased: true;
+
+/// Global value used for all elements that have a border radius.
+$global-radius: 3px;
+
+
+/// 2. Colors
+/// ---------
+
+$color-primary: #3c3c3f;
+$color-light-blue: #2c87c2;
+
+// Outlines
+$outline-primary: #8f8f96;
+
+
+// 3. Typography
+// -------------
+
+/// Font family for header elements.
+$header-font-family: $global-font-family;
+
+/// Sizes for headings at various screen sizes. Each key is a breakpoint, and each value is a map of heading styles.
+$header-sizes: (
+    'h1': 30px,
+    'h2': 26px,
+    'h3': 24px,
+    'h4': 20px,
+    'h5': 18px,
+    'h6': 16px
+);
+
+/// Font style of headers.
+$header-font-style: normal;
+
+/// Text rendering method of headers.
+$header-text-rendering: optimizeLegibility;
+
+/// Bottom margin of paragraphs.
+$paragraph-margin-bottom: rem-calc(16);
+
+/// Line height of text inside `<p>` elements.
+$paragraph-lineheight: 1.6;
+
+/// Text rendering method for paragraph text.
+$paragraph-text-rendering: optimizeLegibility;
+
+/// Bottom margin of headers.
+$header-margin-bottom: rem-calc(10);
+
+/// Default color for links.
+$anchor-color: $color-light-blue;
+
+/// Default color for links on hover.
+$anchor-color-hover: lighten($anchor-color, 10%);
+
+/// Default text decoration for links.
+$anchor-text-decoration: underline;
+
+/// Default text decoration for links on hover.
+$anchor-text-decoration-hover: none;
+
+/// Bottom margin for items in a list.
+$list-margin-bottom: $paragraph-margin-bottom;
+
+/// Bullet type to use for unordered lists.
+$list-style-type: disc;
+
+/// Positioning for bullets on unordered list items.
+$list-style-position: outside;
+
+/// Line height for items in a list.
+$list-lineheight: $paragraph-lineheight;
+
+
+// 4. Buttons
+// ----------
+
+$button-blue-background: blue;
+
+$button-blue-color: white;
+
+
+// 5. Breakpoints
+// --------------
+
+$breakpoints: (
+  'small': 0px,
+  'medium': 640px,
+  'large': 1024px,
+  'xlarge': 1200px,
+  'xxlarge': 1440px,
+);
+
+$breakpoint-classes: (small medium large);
+
+
+// 6. Grid
+// -------
+
+$grid-columns: 12;
+$grid-gutter-width: rem-calc(20);
+
+
+// 7. Modal
+// --------
+
+$modal-transform: true;
+
+$modal-overlay-background: rgba(0, 0, 0, .5);
+
+$modal-content-background: white;
+
+$modal-min-width: rem-calc(600);

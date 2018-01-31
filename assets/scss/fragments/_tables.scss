@@ -1,0 +1,39 @@
+.f-res-table {
+    width: 100%;
+
+    tr {
+        border-top: 1px solid $color-primary;
+        border-bottom: 1px solid $color-primary;
+    }
+
+    th {
+        // For accessibility, use a visually hidden method here instead!
+        display: none;
+    }
+
+    td {
+        display: block;
+
+        &:before {
+            float: left;
+
+            content: attr(data-th)': ';
+
+            font-weight: bold;
+
+            @include mq('medium') {
+                display: none;
+            }
+        }
+    }
+
+    th, td {
+        text-align: right;
+
+        @include mq('medium') {
+            display: table-cell;
+
+            text-align: left;
+        }
+    }
+}

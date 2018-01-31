@@ -1,0 +1,30 @@
+/* [Elements] - Forms
+------------------------------------------------------------------ */
+
+[type='text'], [type='password'], [type='date'], [type='datetime'],
+[type='datetime-local'], [type='month'], [type='week'], [type='email'],
+[type='number'], [type='search'], [type='tel'], [type='time'],
+[type='url'], [type='color'], textarea {
+    display: block;
+
+    width: 100%;
+    height: rem-calc(40);
+
+    padding: rem-calc(0 8);
+
+    font-family: inherit;
+    font-size: rem-calc(16);
+
+    border: 1px solid $outline-primary;
+    border-radius: $global-radius;
+
+    background-color: white;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+}
