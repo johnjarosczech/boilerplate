@@ -38,6 +38,7 @@ let config = {
             dest: 'js',
             entries: [
                 './assets/js/utils/*.js',
+                './assets/js/controls/slider.js',
                 './assets/js/containers/tabs.js',
                 './assets/js/containers/modal.js',
                 './assets/js/navigation/hamburger.js',

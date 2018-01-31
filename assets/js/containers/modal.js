@@ -32,8 +32,18 @@ class Modal {
             e.preventDefault()
 
             if (hasClass(e.target, this.selectors.close) || hasClass(e.target, this.selectors.overlay)) {
-                removeClass(this.modal, 'active')
+                this.closeModal()
             }
         })
+
+        document.addEventListener('keyup', (e) => {
+            if (e.keyCode == 27) {
+                this.closeModal()
+            }
+        })
+    }
+
+    closeModal() {
+        removeClass(this.modal, 'active')
     }
 }

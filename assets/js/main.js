@@ -8,3 +8,5 @@ new Tabs({
 new Hamburger()
 
 new Modal()
+
+new Slider('.slider')

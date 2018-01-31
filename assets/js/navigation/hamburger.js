@@ -18,8 +18,20 @@ class Hamburger {
         this.hamburger.addEventListener('click', (e) => {
             e.preventDefault()
 
-            toggleClass(this.list, 'active')
-            toggleClass(this.hamburger, 'active')
+            this.toggle()
         })
+
+        document.addEventListener('keyup', (e) => {
+            if (e.keyCode == 27 && this.open) {
+                this.toggle()
+            }
+        })
+    }
+
+    toggle() {
+        toggleClass(this.list, 'active')
+        toggleClass(this.hamburger, 'active')
+
+        this.open = !this.open
     }
 }

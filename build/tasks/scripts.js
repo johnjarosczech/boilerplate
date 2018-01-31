@@ -32,7 +32,7 @@ let task = () => {
         }))
         .pipe(config.production ? uglify() : util.noop())
         .pipe(gulp.dest(paths('scripts').dest))
-        .pipe(notify('Styles task complete'))
+        .pipe(notify('Scripts task complete'))
 }
 
 gulp.task('scripts', task)
