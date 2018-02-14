@@ -19,6 +19,8 @@ class Slider {
         this.index = 0
         this.total = this.slides.length
         this.self = this
+        this.animateLeft = null
+        this.slideLeft = null
 
         this.handlePreviousSlide()
         this.handleNextSlide()
@@ -26,19 +28,38 @@ class Slider {
 
     slideTo(slide, direction) {
         var currentSlide = this.slides[slide]
-
-        currentSlide.style.left = '0px'
+        var currentIndex = slide
+        var newIndex = 0
+        
         currentSlide.style.display = 'block'
 
         if (direction === 'prev') {
             slide == slide++
-
-            this.slides[slide].style.display = 'none'
+ 
+            if (slide > this.total - 1) {
+                slide = 0
+            }
         } else {
             slide == slide--
 
-            this.slides[slide].style.display = 'none'
+            if (slide < 0) {
+                slide = this.total - 1
+            }
         }
+
+        newIndex = slide
+
+        if (newIndex > currentIndex) {
+            this.slideLeft = '100%'
+            this.animateLeft = '-100%'
+        } else {
+            this.slideLeft = '-100%'
+            this.animateLeft = '100%'
+        }
+
+        document.querySelectorAll(this.slides)[newIndex]
+        
+        this.slides[slide].style.display = 'none'
     }
 
     handlePreviousSlide() {
@@ -46,11 +67,9 @@ class Slider {
 
         this.previous.addEventListener('click', () => {
             $this.index--
-            $this.next.style.display = 'block'
 
-            if ($this.index == 0) {
-                $this.index = 0
-                $this.previous.style.display = 'none'
+            if ($this.index < 0) {
+                $this.index = $this.total - 1
             }
 
             $this.slideTo(this.index, 'prev')
@@ -62,11 +81,9 @@ class Slider {
 
         this.next.addEventListener('click', () => {
             $this.index++
-            $this.previous.style.display = 'block'
 
-            if ($this.index == $this.total - 1) {
-                $this.index = $this.total - 1
-                $this.next.style.display = 'none'
+            if ($this.index == $this.total) {
+                $this.index = 0
             }
 
             $this.slideTo($this.index, 'next')
