@@ -15,27 +15,25 @@
 
         <link rel="stylesheet" href="css/app.min.css" />
     </head>
-    <body>
+    <body class="js-tabs">
 
-        <svg class="icon icon-check">
-            <use xlink:href="icons/sprite.svg#check"></use>
-        </svg>
-
-        <h2>Components</h2>
-        <ul>
-            <li>
-                <a href="tabs.html">Tabs (JS)</a>
-            </li>
-            <li>
-                <a href="tables.html">Tables</a>
-            </li>
-            <li>
-                <a href="hamburger.html">Hamburger menu (JS)</a>
-            </li>
-            <li>
-                <a href="modal.html">Modal (JS)</a>
-            </li>
-        </ul>
+        <div class="container--limitations container--fluid">
+            <div class="tabs">
+                <div class="tabs__links-holder">
+                    <button class="tabs__link is-active" data-hash="link-1">Link 1</button>
+                    <button class="tabs__link" data-hash="link-2">Link 2</button>
+                </div>
+    
+                <div class="tabs__content-holder">
+                    <div class="tabs__content is-active">
+                        a
+                    </div>
+                    <div class="tabs__content">
+                        b
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="js/app.min.js"></script>
     </body>

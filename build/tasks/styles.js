@@ -5,12 +5,12 @@ import paths from '../utils/paths'
 import gulp from 'gulp'
 import sass from 'gulp-sass'
 import rename from 'gulp-rename'
-import notify from 'gulp-notify'
 import minifycss from 'gulp-minify-css'
 import plubmer from 'gulp-plumber'
 import sourcemaps from 'gulp-sourcemaps'
 import autoprefixer from 'gulp-autoprefixer'
 import util from 'gulp-util'
+import connect from 'gulp-connect'
 
 let options = {
     notification: {
@@ -35,7 +35,7 @@ let task = () => {
         .pipe(config.production ? minifycss() : util.noop())
         .pipe(!config.production ? sourcemaps.write() : util.noop())
         .pipe(gulp.dest(paths('styles').dest))
-        .pipe(notify('Styles task complete'))
+        .pipe(connect.reload())
 }
 
 gulp.task('styles', task)

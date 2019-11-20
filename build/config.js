@@ -15,6 +15,11 @@ let config = {
      * Tasks settings
      * * * * * * */
     tasks: {
+        server: {
+            port: 8000,
+            uri: 'http://localhost:8000',
+            app: 'Google Chrome'
+        },
         styles: {
             src: 'scss',
             dest: 'css',
@@ -50,6 +55,13 @@ let config = {
                     suffix: '.min'
                 }
             },
+            extensions: [
+                '*'
+            ]
+        },
+        svg: {
+            src: 'icons',
+            dest: 'icons',
             extensions: [
                 '*'
             ]

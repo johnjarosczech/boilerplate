@@ -5,9 +5,9 @@ import gulp from 'gulp'
 import uglify from 'gulp-uglify'
 import concat from 'gulp-concat'
 import rename from 'gulp-rename'
-import notify from 'gulp-notify'
 import util from 'gulp-util'
 import babel from 'gulp-babel'
+import connect from 'gulp-connect'
 
 let options = {
     notification: {
@@ -32,7 +32,7 @@ let task = () => {
         }))
         .pipe(config.production ? uglify() : util.noop())
         .pipe(gulp.dest(paths('scripts').dest))
-        .pipe(notify('Scripts task complete'))
+        .pipe(connect.reload());
 }
 
 gulp.task('scripts', task)

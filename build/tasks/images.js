@@ -25,8 +25,7 @@ let optimise = () => {
         .src(paths('images').src)
         .pipe(image({
             pngquant: true,
-            jpegoptim: true,
-            svgo: true
+            jpegoptim: true
         }).on('error', notification(options.notification)))
         .pipe(gulp.dest(paths('images').dest))
 }

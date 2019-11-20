@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "dir-compare": "^1.4.0",
     "gulp": "^3.9.1",
@@ -22,12 +21,26 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-notify": "^3.1.0",
     "gulp-plumber": "^1.2.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
     "path": "^0.12.7",
     "require-dir": "^0.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "browser-sync": "^2.26.7",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-livingstyleguide": "^1.0.0",
+    "gulp-open": "^3.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-util": "^3.0.8",
+    "http": "0.0.0",
+    "st": "^2.0.0"
   }
 }
