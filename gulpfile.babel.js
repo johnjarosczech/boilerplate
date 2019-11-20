@@ -4,6 +4,10 @@ import connect from 'gulp-connect'
 
 requireDir('./build/tasks')
 
+gulp.task('html', () => {
+    return gulp.src('public/**/*.html').pipe(connect.reload())
+});
+
 gulp.task('watch', ['styles', 'scripts', 'server'], () => {
     gulp.watch('./assets/scss/**/*', ['styles'])
     gulp.watch('./assets/js/**/*', ['scripts'])
@@ -11,7 +15,3 @@ gulp.task('watch', ['styles', 'scripts', 'server'], () => {
 })
 
 gulp.task('default', ['styles', 'scripts', 'images', 'svg'])
-
-gulp.task('html', () => {
-    return gulp.src('public/**/*.html').pipe(connect.reload())
-});
