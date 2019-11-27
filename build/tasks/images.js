@@ -7,7 +7,6 @@ import comparision from 'dir-compare'
 import filter from 'gulp-filter'
 import util from 'gulp-util'
 import image from 'gulp-image'
-import notification from '../utils/notifications';
 
 let options = {
     notification: {
