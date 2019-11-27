@@ -32,13 +32,13 @@ For a dev using.
 gulp
 ```
 
-or watch
+or watch (with a gulp watch will run server with livereloading)
 
 ```
 gulp watch
 ```
 
-For a production using.
+For a production using. (minify css, js, images, generate SVG sprite and zip them up)
 
 ```
 gulp --production
@@ -60,6 +60,12 @@ If you put in the public folder you get the alert: Unexpected files in destinati
 gulp images
 ```
 
+#### SVG sprites
+Generate SVG sprites to public folder
+```
+gulp svg
+```
+
 #### Styles
 
 ```
@@ -70,4 +76,10 @@ gulp styles
 
 ```
 gulp scripts
+```
+
+#### Zip
+
+```
+gulp zip
 ```
