@@ -25,7 +25,7 @@ let task = () => {
     return gulp
         .src(paths('styles').src)
         .pipe(plubmer())
-        .pipe(sourcemaps.init())
+        .pipe(!config.production ? sourcemaps.init() : util.noop())
         .pipe(sass(config.tasks.styles.sass).on('error', notification(options.notification)))
         .pipe(rename({
             basename: config.tasks.styles.plugins.rename.basename,

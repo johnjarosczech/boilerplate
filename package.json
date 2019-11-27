@@ -34,8 +34,9 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "gulp-zip": "^5.0.1",
+    "lodash.template": ">=4.5.0",
     "path": "^0.12.7",
-    "require-dir": "^0.3.2",
-    "lodash.template": ">=4.5.0"
+    "require-dir": "^0.3.2"
   }
 }

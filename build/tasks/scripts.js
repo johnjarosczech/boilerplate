@@ -30,7 +30,7 @@ let task = () => {
             basename: config.tasks.scripts.plugins.rename.basename,
             suffix: config.tasks.scripts.plugins.rename.suffix
         }))
-        .pipe(config.production ? uglify() : util.noop())
+        .pipe(config.production ? uglify().on('error', options.notification) : util.noop())
         .pipe(gulp.dest(paths('scripts').dest))
         .pipe(connect.reload());
 }

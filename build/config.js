@@ -72,6 +72,10 @@ let config = {
             extensions: [
                 '*'
             ]
+        },
+        zip: {
+            src: './public/**/*',
+            dest: './zip'
         }
     },
 }
